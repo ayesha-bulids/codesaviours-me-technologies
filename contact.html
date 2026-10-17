@@ -1,61 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | ME Technologies</title>
+    <title>Contact Us - ME Technologies</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <img src="Me%20technology%20logo.jpg"
+        <img src="images/Me%20technology%20logo.jpg"
              alt="ME Technologies Logo"
              class="company-logo">
-        <h1>ME Technologies</h1>
-        <p>Smart Solar Energy Solutions</p>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <h1>ME Technologies</h1>
+        <p>We Would Love to Hear From You</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
     <main>
         <section>
             <h2>Contact Us</h2>
-            <p>Interested in solar energy? Contact us to discuss your requirements.</p>
+            <p>
+                Have questions about solar energy solutions?
+                Send us your inquiry.
+            </p>
+        </section>
 
-            <form action="#" method="get">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name"
-                       placeholder="Enter your name" required>
+        <section>
+            <h2>Send Us a Message</h2>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email"
-                       placeholder="Enter your email" required>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone"
-                       placeholder="Enter your phone number">
+                <div>
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
 
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="5"
-                          placeholder="Write your message here" required></textarea>
+                <div>
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter the subject"
+                        required>
+                </div>
+
+                <div>
+                    <label for="message">Your Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message here"
+                        required></textarea>
+                </div>
 
                 <button type="submit">Send Message</button>
             </form>
         </section>
 
         <section>
-            <h2>Our Contact Information</h2>
-            <p>Email: Add the company's verified email here.</p>
-            <p>Phone: Add the company's verified phone number here.</p>
-            <p>Address: Add the company's verified address here.</p>
+            <h2>Our Services</h2>
+            <p>Learn more about our solar energy solutions.</p>
+            <a href="services.html">Explore Services</a>
         </section>
     </main>
 
