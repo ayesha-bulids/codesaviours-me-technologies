@@ -1,88 +1,87 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - ME Technologies</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Us | ME Technologies</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-   <img src="images/Me%20technology%20logo.jpg"
-     alt="ME Technologies Logo"
-     class="company-logo">
+    <img src="./Me%20technology%20logo.jpg"
+         alt="ME Technologies Logo"
+         class="company-logo">
+
     <div class="company-info">
         <h1>ME Technologies</h1>
         <p>Smart Solar Solutions for a Brighter Future</p>
     </div>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./services.html">Services</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./contact.html">Contact</a>
     </nav>
 </header>
 
 <main>
     <section class="hero">
-        <h2>Our Solar Services</h2>
-        <p>Explore solar energy applications for different needs.</p>
+        <h2>Contact Us</h2>
+        <p>Get in touch with ME Technologies to explore solar energy solutions for your needs.</p>
     </section>
 
-    <section>
-        <h2>Residential Solar Solutions</h2>
-        <p>
-            Solar energy systems for homes, designed to help households
-            explore renewable electricity options.
-        </p>
+    <section class="page-section">
+        <h2>Request a Solar Quote</h2>
+        <p>Fill out the form below and tell us about your solar energy requirements.</p>
+
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number">
+
+            <label for="service">Solar Service Required</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="residential">Residential Solar</option>
+                <option value="commercial">Commercial Solar</option>
+                <option value="industrial">Industrial Solar</option>
+                <option value="agricultural">Agricultural Solar</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5"
+                      placeholder="Tell us about your requirements"
+                      required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
-    <section>
-        <h2>Commercial and Industrial Solar</h2>
-        <p>
-            Solar energy options for offices, shops, commercial buildings,
-            and industrial facilities.
-        </p>
-    </section>
-
-    <section>
-        <h2>Agricultural Solar Solutions</h2>
-        <p>
-            Solar energy applications for agricultural operations,
-            including suitable farm and irrigation needs.
-        </p>
-    </section>
-
-    <section>
-        <h2>Explore Our Solutions</h2>
-        <div class="services-container">
-            <div class="service-box">
-                <h3>Home Solar</h3>
-                <p>Renewable energy options for residential properties.</p>
-            </div>
-
-            <div class="service-box">
-                <h3>Business Solar</h3>
-                <p>Solar solutions for business energy requirements.</p>
-            </div>
-
-            <div class="service-box">
-                <h3>Farm Solar</h3>
-                <p>Solar applications for agricultural use.</p>
-            </div>
-        </div>
-
-        <a class="btn" href="contact.html">Request a Quote</a>
+    <section class="page-section">
+        <h2>Our Services</h2>
+        <p>We provide solar energy solutions for homes, businesses, industries and agricultural needs.</p>
+        <a class="btn" href="./services.html">Explore Our Services</a>
     </section>
 </main>
 
 <footer>
     <p>&copy; 2026 ME Technologies. All rights reserved.</p>
-    <a href="contact.html">Contact Us</a>
+    <p>Contact us to learn more about our solar solutions.</p>
 </footer>
 
 </body>
 </html>
+```
