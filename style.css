@@ -260,8 +260,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .page-section {
-        margin: 20px auto;
-        padding: 20px 15px;
-    }
+    .page-section p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.page-section h3 {
+    color: #087f8c;
+    margin: 20px 0 10px;
+    text-align: center;
+}
 }
