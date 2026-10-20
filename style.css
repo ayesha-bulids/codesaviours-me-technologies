@@ -1,4 +1,4 @@
-
+```css
 /* General Styles */
 * {
     margin: 0;
@@ -13,7 +13,11 @@ body {
     line-height: 1.6;
 }
 
-/* Header: Logo and Name Left, Navbar Right */
+main {
+    min-height: 65vh;
+}
+
+/* Header */
 .main-header {
     display: flex;
     flex-direction: row;
@@ -66,21 +70,16 @@ body {
     font-weight: bold;
     white-space: nowrap;
     padding: 8px 0;
-    transition: color 0.3s ease;
 }
 
 .main-header nav a:hover {
     color: #ffd166;
 }
 
-/* Main Sections */
-main {
-    min-height: 65vh;
-}
-
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 90px 20px;
+    padding: 70px 20px;
     background-color: #e0f2f1;
 }
 
@@ -96,41 +95,47 @@ main {
     font-size: 17px;
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
     background-color: #087f8c;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #055b64;
 }
 
-/* About, Services, Projects and Contact */
+/* About, Services, Projects and Contact Sections */
 .page-section {
     max-width: 1100px;
     margin: 40px auto;
     padding: 30px 20px;
+    text-align: center;
 }
 
 .page-section h2 {
-    text-align: center;
     color: #073b4c;
     font-size: 30px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .page-section h3 {
     color: #087f8c;
     margin: 20px 0 10px;
+    text-align: center;
 }
 
 .page-section p {
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
+    text-align: center;
 }
 
 /* Service and Project Cards */
@@ -141,7 +146,8 @@ main {
     margin-top: 30px;
 }
 
-.service-card {
+.service-card,
+.service-box {
     background-color: white;
     padding: 25px;
     border-radius: 10px;
@@ -150,21 +156,20 @@ main {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-box:hover {
     transform: translateY(-5px);
-}
-
-.service-card h3 {
-    margin-top: 0;
 }
 
 /* Contact Form */
 form {
+    width: 100%;
     max-width: 600px;
     margin: 25px auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: left;
 }
 
 form label {
@@ -172,7 +177,8 @@ form label {
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
     width: 100%;
     padding: 12px;
     border: 1px solid #b8c7ce;
@@ -181,7 +187,8 @@ form textarea {
 }
 
 form input:focus,
-form textarea:focus {
+form textarea:focus,
+form select:focus {
     outline: 2px solid #087f8c;
     border-color: #087f8c;
 }
@@ -208,6 +215,14 @@ footer {
     text-align: center;
     padding: 18px;
     margin-top: 30px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: white;
 }
 
 /* Tablet View */
@@ -242,6 +257,7 @@ footer {
         justify-content: center;
         margin-left: 0;
         gap: 12px;
+        flex-wrap: wrap;
     }
 
     .main-header nav a {
@@ -249,26 +265,20 @@ footer {
     }
 
     .hero {
-        padding: 55px 15px;
+        padding: 45px 15px;
     }
 
     .hero h2 {
         font-size: 27px;
     }
 
+    .page-section {
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+
     .services-container {
         grid-template-columns: 1fr;
     }
-
-    /* Center About page text */
-.page-section p {
-    margin-bottom: 15px;
-    text-align: center;
 }
-
-.page-section h3 {
-    color: #087f8c;
-    margin: 20px 0 10px;
-    text-align: center;
-}
-}
+```
