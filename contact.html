@@ -3,95 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - ME Technologies</title>
+    <title>ME Technologies | Contact</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-      <img src="https://ayesha-bulids.github.io/codesaviours-me-technologies/Me%20technology%20logo.jpg"
-     alt="ME Technologies Logo"
-     style="width: 90px; height: auto; display: block; margin: 10px auto;">
+<header class="main-header">
+    <img src="Me%20technology%20logo.jpg"
+         alt="ME Technologies Logo"
+         class="company-logo">
+
+    <div class="company-info">
         <h1>ME Technologies</h1>
-        <p>We Would Love to Hear From You</p>
+        <p>Smart Solar Solutions for a Brighter Future</p>
+    </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <main>
-        <section>
-            <h2>Contact Us</h2>
-            <p>
-                Have questions about solar energy solutions?
-                Send us your inquiry.
-            </p>
-        </section>
+<main>
+    <section class="page-section">
+        <h2>Contact Us</h2>
+        <p>Contact us to discuss your solar energy requirements.</p>
 
-        <section>
-            <h2>Send Us a Message</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-            <form action="#" method="post">
-                <div>
-                    <label for="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required>
-                </div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-                <div>
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        required>
-                </div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-                <div>
-                    <label for="subject">Subject</label>
-                    <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        placeholder="Enter the subject"
-                        required>
-                </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
 
-                <div>
-                    <label for="message">Your Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message here"
-                        required></textarea>
-                </div>
+<footer>
+    <p>&copy; 2026 ME Technologies. All rights reserved.</p>
+</footer>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
-        <section>
-            <h2>Our Services</h2>
-            <p>Learn more about our solar energy solutions.</p>
-            <a href="services.html">Explore Services</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 ME Technologies. All rights reserved.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
