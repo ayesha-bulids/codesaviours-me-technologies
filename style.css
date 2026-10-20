@@ -260,7 +260,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .page-section p {
+    /* Center About page text */
+.page-section p {
     margin-bottom: 15px;
     text-align: center;
 }
