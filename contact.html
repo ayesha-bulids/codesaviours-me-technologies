@@ -1,87 +1,79 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | ME Technologies</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Contact Us - ME Technologies</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-    <img src="./Me%20technology%20logo.jpg"
-         alt="ME Technologies Logo"
-         class="company-logo">
-
+   <img src="images/Me%20technology%20logo.jpg"
+     alt="ME Technologies Logo"
+     class="company-logo">
     <div class="company-info">
         <h1>ME Technologies</h1>
         <p>Smart Solar Solutions for a Brighter Future</p>
     </div>
 
     <nav>
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./services.html">Services</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
 <main>
     <section class="hero">
-        <h2>Contact Us</h2>
-        <p>Get in touch with ME Technologies to explore solar energy solutions for your needs.</p>
+        <h2>Contact ME Technologies</h2>
+        <p>Have questions about solar energy? Send us a message.</p>
     </section>
 
-    <section class="page-section">
-        <h2>Request a Solar Quote</h2>
-        <p>Fill out the form below and tell us about your solar energy requirements.</p>
+    <section>
+        <h2>Request a Quote</h2>
 
-        <form action="#" method="post">
+        <form action="mailto:YOUR-CLIENT-EMAIL@example.com"
+              method="post"
+              enctype="text/plain">
+
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name"
+            <input type="text" id="name" name="Name"
                    placeholder="Enter your full name" required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email"
+            <input type="email" id="email" name="Email"
                    placeholder="Enter your email" required>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone"
-                   placeholder="Enter your phone number">
-
-            <label for="service">Solar Service Required</label>
-            <select id="service" name="service" required>
+            <label for="service">Interested Service</label>
+            <select id="service" name="Service" required>
                 <option value="">Select a service</option>
-                <option value="residential">Residential Solar</option>
-                <option value="commercial">Commercial Solar</option>
-                <option value="industrial">Industrial Solar</option>
-                <option value="agricultural">Agricultural Solar</option>
-                <option value="other">Other</option>
+                <option value="Residential Solar">Residential Solar</option>
+                <option value="Commercial Solar">Commercial Solar</option>
+                <option value="Agricultural Solar">Agricultural Solar</option>
             </select>
 
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5"
-                      placeholder="Tell us about your requirements"
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="5"
+                      placeholder="Write your message here"
                       required></textarea>
 
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit">Send Message</button>
         </form>
-    </section>
 
-    <section class="page-section">
-        <h2>Our Services</h2>
-        <p>We provide solar energy solutions for homes, businesses, industries and agricultural needs.</p>
-        <a class="btn" href="./services.html">Explore Our Services</a>
+        <p class="form-note">
+            Please replace the example email address with the client's
+            verified email before using this form.
+        </p>
     </section>
 </main>
 
 <footer>
     <p>&copy; 2026 ME Technologies. All rights reserved.</p>
-    <p>Contact us to learn more about our solar solutions.</p>
+    <a href="index.html">Back to Home</a>
 </footer>
 
 </body>
 </html>
-```
