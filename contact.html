@@ -1,79 +1,389 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - ME Technologies</title>
+
+    <title>Contact Us | ME Technologies</title>
+    <meta name="description" content="Contact ME Technologies to discuss solar design services and your solar energy requirements.">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contact-page {
+            max-width: 1150px;
+            margin: auto;
+            padding: 40px 20px 60px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .contact-heading h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: 12px;
+        }
+
+        .contact-heading p {
+            max-width: 680px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            padding: 22px 15px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card .contact-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            margin: 5px 0 10px;
+            font-size: 18px;
+        }
+
+        .contact-card p {
+            margin: 0;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .contact-card a {
+            color: #16864b;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .contact-form-box,
+        .office-box {
+            padding: 25px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            min-width: 0;
+        }
+
+        .contact-form-box h2,
+        .office-box h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .contact-form-box > p,
+        .office-box > p {
+            line-height: 1.6;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 16px 0 7px;
+            font-weight: 600;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font: inherit;
+            background: #fff;
+        }
+
+        .contact-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid #16864b;
+            outline-offset: 2px;
+        }
+
+        .contact-submit {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px 18px;
+            border: 0;
+            border-radius: 6px;
+            background: #16864b;
+            color: #fff;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .contact-submit:hover {
+            background: #106638;
+        }
+
+        .contact-submit:disabled {
+            opacity: 0.65;
+            cursor: wait;
+        }
+
+        .form-status {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+
+        .office-map {
+            width: 100%;
+            height: 320px;
+            border: 0;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .map-note {
+            font-size: 13px;
+            color: #555;
+        }
+
+        @media (max-width: 900px) {
+            .contact-cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-page {
+                padding: 25px 14px 40px;
+            }
+
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-box,
+            .office-box {
+                padding: 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header class="main-header">
-  <img src="./Me%20technology%20logo.jpg"
-     alt="ME Technologies Logo"
-     class="company-logo">
-    <div class="company-info">
-        <h1>ME Technologies</h1>
-        <p>Smart Solar Solutions for a Brighter Future</p>
-    </div>
+    <!-- Keep your existing shared website navbar/header here. -->
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <main class="contact-page">
 
-<main>
-    <section class="hero">
-        <h2>Contact ME Technologies</h2>
-        <p>Have questions about solar energy? Send us a message.</p>
-    </section>
+        <section class="contact-heading">
+            <h2>Contact ME Technologies</h2>
+            <p>
+                Have questions about solar design services?
+                Send us a message and tell us about your requirements.
+            </p>
+        </section>
 
-    <section>
-        <h2>Request a Quote</h2>
+        <section class="contact-cards" aria-label="Contact information">
 
-        <form action="mailto:YOUR-CLIENT-EMAIL@example.com"
-              method="post"
-              enctype="text/plain">
+            <article class="contact-card">
+                <div class="contact-icon" aria-hidden="true">✉️</div>
+                <h3>Email Us</h3>
+                <p>
+                    <a href="mailto:chaudhryayesha782@gmail.com">
+                        Email our team
+                    </a>
+                </p>
+            </article>
 
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="Name"
-                   placeholder="Enter your full name" required>
+            <article class="contact-card">
+                <div class="contact-icon" aria-hidden="true">📞</div>
+                <h3>Call Us</h3>
+                <p>Please use the official company phone number.</p>
+            </article>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="Email"
-                   placeholder="Enter your email" required>
+            <article class="contact-card">
+                <div class="contact-icon" aria-hidden="true">📍</div>
+                <h3>Our Location</h3>
+                <p>Please confirm the company's official office address.</p>
+            </article>
 
-            <label for="service">Interested Service</label>
-            <select id="service" name="Service" required>
-                <option value="">Select a service</option>
-                <option value="Residential Solar">Residential Solar</option>
-                <option value="Commercial Solar">Commercial Solar</option>
-                <option value="Agricultural Solar">Agricultural Solar</option>
-            </select>
+            <article class="contact-card">
+                <div class="contact-icon" aria-hidden="true">☀️</div>
+                <h3>Our Services</h3>
+                <p>Solar design services for different applications.</p>
+            </article>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="Message" rows="5"
-                      placeholder="Write your message here"
-                      required></textarea>
+        </section>
 
-            <button type="submit">Send Message</button>
-        </form>
+        <section class="contact-layout">
 
-        <p class="form-note">
-            Please replace the example email address with the client's
-            verified email before using this form.
-        </p>
-    </section>
-</main>
+            <div class="contact-form-box">
+                <h2>Send Us a Message</h2>
+                <p>Complete the form below and submit your enquiry.</p>
 
-<footer>
-    <p>&copy; 2026 ME Technologies. All rights reserved.</p>
-    <a href="index.html">Back to Home</a>
-</footer>
+                <form
+                    class="contact-form"
+                    id="contactForm"
+                    action="https://formspree.io/f/xwlleaqn"
+                    method="POST"
+                >
+                    <label for="name">Full Name *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                        maxlength="100"
+                    >
+
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="phone">Phone Number (optional)</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        autocomplete="tel"
+                    >
+
+                    <label for="service">Service Interested In *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="Residential Solar">Residential Solar</option>
+                        <option value="Commercial Solar">Commercial Solar</option>
+                        <option value="Industrial Solar">Industrial Solar</option>
+                        <option value="Agricultural Solar">Agricultural Solar</option>
+                        <option value="Solar Design">Solar Design</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="message">Your Message *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        minlength="10"
+                        maxlength="3000"
+                        placeholder="Tell us about your requirements..."
+                    ></textarea>
+
+                    <button type="submit" class="contact-submit" id="submitButton">
+                        Send Message
+                    </button>
+
+                    <p
+                        class="form-status"
+                        id="formStatus"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+                </form>
+            </div>
+
+            <div class="office-box">
+                <h2>Find Us</h2>
+                <p>
+                    View the map below. Confirm the official company location
+                    before publishing it as the office address.
+                </p>
+
+                <iframe
+                    class="office-map"
+                    title="Map of Islamabad"
+                    src="https://maps.google.com/maps?q=Islamabad%2C%20Pakistan&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                ></iframe>
+
+                <p class="map-note">
+                    This is a general Islamabad map, not a verified company-office pin.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Keep your existing shared website footer here. -->
+
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+        const submitButton = document.getElementById("submitButton");
+
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+
+            formStatus.textContent = "Sending your message...";
+            submitButton.disabled = true;
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: new FormData(contactForm),
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.textContent =
+                        "Thank you! Your message was submitted successfully.";
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent =
+                        "Your message could not be submitted. Please try again.";
+                }
+            } catch (error) {
+                formStatus.textContent =
+                    "Connection error. Please check your internet and try again.";
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+    </script>
 
 </body>
 </html>
