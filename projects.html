@@ -1,17 +1,150 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - ME Technologies</title>
+    <title>Solar Projects | ME Technologies</title>
+    <meta name="description" content="Explore solar energy projects for homes, businesses and agriculture by ME Technologies.">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .projects-section {
+            padding: 40px 6%;
+            text-align: center;
+        }
+
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .filter-btn {
+            padding: 10px 18px;
+            border: 1px solid #16804a;
+            border-radius: 5px;
+            background: white;
+            color: #16804a;
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #16804a;
+            color: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px #00000015;
+            text-align: left;
+            transition: opacity .25s ease;
+        }
+
+        .project-card img {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform .3s ease;
+        }
+
+        .project-card img:hover {
+            transform: scale(1.04);
+        }
+
+        .project-info {
+            padding: 18px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .project-info p {
+            margin: 6px 0;
+        }
+
+        .project-card[hidden] {
+            display: none;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #000000e8;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 850px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card img {
+                height: 220px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header class="main-header">
- <img src="./Me%20technology%20logo.jpg"
-     alt="ME Technologies Logo"
-     class="company-logo">
+    <img src="images/Me%20technology%20logo.jpg"
+         alt="ME Technologies Logo"
+         class="company-logo">
+
     <div class="company-info">
         <h1>ME Technologies</h1>
         <p>Smart Solar Solutions for a Brighter Future</p>
@@ -29,53 +162,133 @@
 <main>
     <section class="hero">
         <h2>Our Solar Projects</h2>
-        <p>
-            Explore examples of solar energy applications for homes,
-            businesses, industries, and agriculture.
-        </p>
+        <p>Explore solar energy applications for homes, businesses, industries and agriculture.</p>
     </section>
 
-    <section>
-        <h2>Project Categories</h2>
+    <section class="projects-section">
+        <h2>Explore Our Projects</h2>
+        <p>Choose a category to explore our solar project photos.</p>
 
-        <div class="services-container">
-            <div class="service-box">
-                <h3>Residential Solar</h3>
-                <p>
-                    Solar energy applications designed for residential
-                    properties.
-                </p>
-            </div>
+        <div class="project-filters" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="industrial">Industrial</button>
+            <button class="filter-btn" data-filter="agricultural">Agricultural</button>
+        </div>
 
-            <div class="service-box">
-                <h3>Commercial Solar</h3>
-                <p>
-                    Solar energy applications for commercial buildings
-                    and business facilities.
-                </p>
-            </div>
+        <div class="project-grid">
+            <article class="project-card" data-category="residential">
+                <img src="images/solar-project-1.jpg"
+                     alt="Solar project photo 1"
+                     loading="lazy"
+                     tabindex="0"
+                     data-title="Solar Project 1"
+                     data-details="Project location and system size: please confirm with the mentor.">
+                <div class="project-info">
+                    <h3>Solar Project 1</h3>
+                    <p>Category: Residential</p>
+                    <p>Location and system size: To be confirmed</p>
+                </div>
+            </article>
 
-            <div class="service-box">
-                <h3>Agricultural Solar</h3>
-                <p>
-                    Solar energy applications for farms and agricultural
-                    operations.
-                </p>
-            </div>
+            <article class="project-card" data-category="commercial">
+                <img src="images/solar-project-2.jpg"
+                     alt="Solar project photo 2"
+                     loading="lazy"
+                     tabindex="0"
+                     data-title="Solar Project 2"
+                     data-details="Project location and system size: please confirm with the mentor.">
+                <div class="project-info">
+                    <h3>Solar Project 2</h3>
+                    <p>Category: Commercial</p>
+                    <p>Location and system size: To be confirmed</p>
+                </div>
+            </article>
         </div>
     </section>
 
-    <section>
-        <h2>Interested in a Solar Solution?</h2>
+    <section class="projects-section">
+        <h2>Want a Solar System Like This?</h2>
         <p>Contact us to discuss your solar energy requirements.</p>
-        <a class="btn" href="contact.html">Contact Us</a>
+        <a class="btn" href="contact.html">Get Free Quote</a>
     </section>
 </main>
+
+<div class="lightbox" id="projectLightbox" role="dialog"
+     aria-modal="true" aria-label="Project photo">
+    <button class="lightbox-close" id="lightboxClose"
+            aria-label="Close photo">&times;</button>
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+        <h2 id="lightboxTitle"></h2>
+        <p id="lightboxDetails"></p>
+    </div>
+</div>
 
 <footer>
     <p>&copy; 2026 ME Technologies. All rights reserved.</p>
     <a href="contact.html">Contact Us</a>
 </footer>
+
+<script>
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+
+            filterButtons.forEach(item => item.classList.remove("active"));
+            button.classList.add("active");
+
+            projectCards.forEach(card => {
+                card.hidden = filter !== "all" &&
+                    card.dataset.category !== filter;
+            });
+        });
+    });
+
+    const lightbox = document.getElementById("projectLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxDetails = document.getElementById("lightboxDetails");
+    const closeButton = document.getElementById("lightboxClose");
+
+    function openLightbox(image) {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightboxTitle.textContent = image.dataset.title;
+        lightboxDetails.textContent = image.dataset.details;
+        lightbox.classList.add("open");
+        closeButton.focus();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove("open");
+        lightboxImage.src = "";
+    }
+
+    document.querySelectorAll(".project-card img").forEach(image => {
+        image.addEventListener("click", () => openLightbox(image));
+        image.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openLightbox(image);
+            }
+        });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeLightbox();
+    });
+</script>
 
 </body>
 </html>
