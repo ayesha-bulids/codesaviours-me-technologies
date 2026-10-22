@@ -23,8 +23,8 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
-    padding: 12px 25px;
+   padding: 12px 15px;
+gap: 8px;
     background-color: #073b4c;
     color: white;
     width: 100%;
